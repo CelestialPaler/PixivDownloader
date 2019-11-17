@@ -11,18 +11,22 @@
    &emsp;What the does script do can be discribed as follows.
 </p>
 <p>
-   &emsp;First, information acquisition for the target image is achieved by the crawler 
-  (using the pixivpy App-api). Then, the picture information already in the collection 
-  is tracked by the record file (illust_data.csv) to check if a new picture does not 
-  appear in the set. After that, a download task is generated, and the download task 
-  is performed by the thread pool. Finally, maintain and update the log file.
+   &emsp;First, information of the target illustration is scanned by the crawler 
+  (using the pixivpy App-api). Then, a CSV file (illust_data.csv) is used to track 
+  all the illustrations that have already been downloaded, which means the illustrations 
+  will not be downloaded twice. After that, a download task is generated, and the task 
+  is performed by the thread pool. Finally, the CSV file will bem updated and a summary 
+  will be displayed.
 </p>
 <p>
    &emsp;It's worth mentioning that this script simply implements some lightweight features, 
   just as an automated script designed to maintain a small image collection. There 
   are a lot of problems that are not well solved, just use some 'patches' to 
   make the function work for now. 
-   &emsp;So, just use it as a simple wheelbarrow.
+</p>
+<p>
+   &emsp;The idea is merely craw and download some illustrations from pixiv, so it is far from being 
+  a reliable and decent tool. So, just use it as a simple wheelbarrow.
 </p>
 
 <h2>Usage</h2>

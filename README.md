@@ -4,7 +4,7 @@
 <h2>Introduction</h2>
 <p>
   &emsp;This script implements a web crawler, resource downloader and resource manager. 
-  By running a script, you can update and maintain a specific collection of illustrations 
+  By running the script, you can update and maintain a specific collection of illustrations 
   by setting related parameters such as keywords. 
 </p>
 <p>

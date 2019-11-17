@@ -1,27 +1,25 @@
 '''
 This script implements a web crawler, resource downloader and resource manager. 
-By running a script, you can update and maintain a specific collection of illustrations 
-by setting related parameters such as keywords. 
+By running the script, you can update and maintain a specific collection of illustrations 
+by setting related parameters such as keywords.
 What the does script do can be discribed as follows.
-First, information acquisition for the target image is achieved by the crawler 
-(using the pixivpy App-api). Then, the picture information already in the collection 
-is tracked by the record file (illust_data.csv) to check if a new picture does not 
-appear in the set. After that, a download task is generated, and the download task 
-is performed by the thread pool. Finally, maintain and update the log file.
-It's worth mentioning that this script simply implements some lightweight features, 
-just as an automated script designed to maintain a small image collection. There 
-are a lot of problems that are not well solved, just use some 'patches' to 
-make the function work for now. So, just use it as a simple wheelbarrow.
+First, information of the target illustration is scanned by the crawler (using the pixivpy App-api). 
+Then, a CSV file (illust_data.csv) is used to track all the illustrations that have already been downloaded, 
+which means the illustrations will not be downloaded twice. After that, a download task is generated,
+and the task is performed by the thread pool. Finally, the CSV file will bem updated and a summary 
+will be displayed.
+It's worth mentioning that this script simply implements some lightweight features, just as an automated 
+script designed to maintain a small image collection. There are a lot of problems that are not well solved,
+just use some 'patches' to make the function work for now.
+The idea is merely craw and download some illustrations from pixiv, 
+so it is far from being a reliable and decent tool. 
+So, just use it as a simple wheelbarrow.
 
-Usage:
 1. Install related dependencies (pixivpy, etc.).
 2. Create a new folder and save the script in it.
-3. Modify the keywords (support multiple keywords). Modify the user name and password 
-    used for login (no priority account required).
+3. Modify the keywords (support multiple keywords). Modify the user name and password used for login (no priority account required).
 4. Run the script. The illustration will be saved in the illustration subfolder.
 5. When you need to update the illustration collection, run the script again.
-
-If you have any questions, please correct me.
 
 See more: https://www.tianshicangxie.com
 Github: https://github.com/CelestialPaler
